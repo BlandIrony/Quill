@@ -15,6 +15,9 @@ const linksWrapper = document.querySelector('[data-item="links-wrapper"]')
 const links = linksWrapper.getElementsByTagName('li')
 const anchors = document.querySelectorAll('[data-item="link"]')
 const gallery = document.querySelector('.gallery')
+const modal = document.querySelector('.modal')
+const closeBtn = document.querySelector('.close')
+const openBtn = document.querySelector('.open')
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -37,6 +40,7 @@ export default class Initialize {
   constructor () {
     this.init()
     this.hoverAnimation()
+    this.modalAnimation()
   }
 
   init () {
@@ -111,6 +115,38 @@ export default class Initialize {
           li.style.fontStyle = 'unset'
         })
       })
+    })
+  }
+
+  modalAnimation () {
+    const tl = gsap.timeline({
+      paused: true,
+      reversed: true,
+      onStart: function () {
+        modal.style.pointerEvents = 'all'
+      },
+      onReverseComplete: () => {
+        modal.style.pointerEvents = 'none'
+      }
+    })
+
+    tl.to(modal, {
+      opacity: 1,
+      display: 'flex',
+      duration: 1.5,
+      ease: 'power2.inOut'
+    })
+
+    openBtn.addEventListener('click', () => {
+      if(tl.reversed()) {
+        tl.play()
+      } else {
+        tl.reverse()
+      }
+    })
+
+    closeBtn.addEventListener('click', () => {
+      tl.reverse()
     })
   }
 
