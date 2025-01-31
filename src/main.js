@@ -82,7 +82,7 @@ export default class Initialize {
       duration: 1.75,
       ease: 'expo.inOut',
       // delay: 0.045 * i
-      stagger: 0.02
+      stagger: 0.04
     }, '-=.5')
 
     // gsap.utils.toArray('[data-item="link"]').forEach((el, i) => {
@@ -97,6 +97,7 @@ export default class Initialize {
         Array.from(links).forEach(li => {
           if(li === link) {
             li.style.color = 'var(--color-black)'
+            li.style.fontStyle = 'italic'
           } else {
             li.style.color = 'var(--color-gray)'
           }
@@ -107,6 +108,7 @@ export default class Initialize {
         this.removeImages()
         Array.from(links).forEach(li => {
           li.style.color = 'var(--color-black)'
+          li.style.fontStyle = 'unset'
         })
       })
     })

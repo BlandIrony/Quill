@@ -17,6 +17,23 @@
         <a href="/" class="text-[1.5rem] uppercase">Quill & Co.</a>
        </div>
 
+       <!-- Show credits modal button -->
+        <div>
+          <button
+            class="group overflow-hidden flex justify-center items-center border-[.45rem] border-gray rounded-full py-4 px-[3rem] hover:scale-90 transition duration-300"
+          >
+            <span class=" inline-block overflow-hidden relative">
+              <span class="block text-[1.5rem] font-bold uppercase group-hover:-translate-y-full transition duration-300">
+                Show Credits
+              </span>
+              <span class="absolute inline-block translate-y-full left-0 text-[1.5rem] font-bold uppercase group-hover:-translate-y-full transition duration-300">
+                Show Credits
+              </span>
+            </span>
+        
+          </button>
+        </div>
+
        <!-- Current page -->
         <div class="">
           <a href="/" class="text-[1.5rem] uppercase underline">Collections</a>
@@ -30,15 +47,6 @@
       <!-- Preview Gallery -->
        <div class="gallery fixed top-0 left-0 -z-10 grid grid-cols-12 grid-rows-12 p-[2rem] w-full h-full">
         
-        <!-- <div class="row-[8/12] col-[3/5] ">
-           <div class="w-full h-[90%]">
-            <div class="w-full h-full" style="background: url('./src/assets/images/Experientia\ 4.jpg'); background-position: center; background-size: cover;"></div>
-           </div>
-
-            <span class="text-[1.75rem] mt-2 uppercase inline-block">
-              Hungry
-            </span>
-        </div> -->
        </div>
 
        <!-- Links -->
@@ -129,6 +137,112 @@
            </div>
         </div>
     </main>
+
+    <!-- Credits modal -->
+     <div class="hidden fixed h-screen w-full inset-0 bg-[hsla(0,0%,9%,0.6)] backdrop-blur-[10px] flex items-center justify-center z-50 overflow-hidden">
+      <div class="min-h-[350px] w-[350px] bg-white rounded-[4.25rem] p-[3rem]">
+        <!-- Header -->
+         <header class="flex justify-between items-center mb-10">
+          <span class="inline-block text-[2rem]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" color="currentColor"><path d="M2.5 12c0-4.478 0-6.718 1.391-8.109S7.521 2.5 12 2.5c4.478 0 6.718 0 8.109 1.391S21.5 7.521 21.5 12c0 4.478 0 6.718-1.391 8.109S16.479 21.5 12 21.5c-4.478 0-6.718 0-8.109-1.391S2.5 16.479 2.5 12"/><path d="M16.5 12a4.5 4.5 0 1 1-9 0a4.5 4.5 0 0 1 9 0m1.008-5.5h-.01"/></g></svg>
+          </span>
+          
+          <span class="inline-flex items-center justify-center flex-1 h-14">
+            <img class="h-full" src="./src/assets/icons/instagram_wordmark_logo_icon_169660.svg" alt="">
+          </span>
+
+          <a href="/" class="inline-block text-[2rem]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11.099 3c-3.65.007-5.56.096-6.781 1.318C3 5.636 3 7.757 3 12c0 4.242 0 6.364 1.318 7.682S7.757 21 11.998 21c4.243 0 6.364 0 7.682-1.318c1.22-1.221 1.31-3.133 1.317-6.782m-.441-9.404L11.05 13.06m9.507-9.563c-.494-.494-3.822-.448-4.525-.438m4.525.438c.494.495.448 3.827.438 4.531" color="currentColor"/></svg>
+          </a>
+         </header>
+
+         <!-- mid-section -->
+          <div class="w-full flex-col justify-center items-center">
+            <div class="flex flex-col items-center">
+              <div class="relative h-40 w-40 flex justify-center items-center rounded-full">
+                <!-- Animated Gradient Border -->
+                <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] p-1 animate-spin-slow"></div>
+              
+                <!-- Image -->
+                <img class="relative h-[93%] w-[93%] object-cover rounded-full" src="./src/assets/icons/images.png" alt="">
+              </div>
+
+              <div class="my-5 text-center"> 
+                <h3 class="text-[2rem] mb-2 font-bold">
+                  Product.notion
+                </h3>
+
+                <span class="text-[1.45rem]">
+                  Join us as we delve into the world of global
+                  design and production knowledge.
+                </span>
+              </div>
+
+              <div class="flex items-center gap-3 mb-8">
+                <span class="inline-block cursor-pointer py-3 px-7 rounded-xl text-[1.5rem] text-white bg-[#0095f6] hover:bg-[#1877f2] transition duration-300">Follow</span>
+                <span class="inline-block cursor-pointer py-3 px-7 bg-gray rounded-xl text-[1.5rem]">Message</span>
+                <span class="inline-block cursor-pointer py-2 px-3 rounded-xl  bg-gray">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12.5 22H6.59c-1.545 0-2.774-.752-3.877-1.803c-2.26-2.153 1.45-3.873 2.865-4.715A10.65 10.65 0 0 1 15 14.78m1.5-8.28a4.5 4.5 0 1 1-9 0a4.5 4.5 0 0 1 9 0m2 15.5v-7M15 18.5h7" color="currentColor"/></svg>
+                </span>
+              </div>
+
+              
+            </div>
+
+            <div class="flex justify-between items-center">
+              <div class="flex flex-col space-y-3 items-center justify-center">
+                <div class="h-24 w-24 border-dotted border-2 rounded-full p-1">
+                  <img class="rounded-full size-full" src="./src/assets/icons/images.png" alt="">
+                </div>
+                <span class="inline-block text-[1.25rem]">
+                  Product Notion
+                </span>
+              </div>
+              <div class="flex flex-col space-y-3 items-center">
+                <div class="h-24 w-24 border-dotted flex items-center justify-center border-2 rounded-full p-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 21c0-1.414 0-2.121.44-2.56C8.878 18 9.585 18 11 18h2c1.414 0 2.121 0 2.56.44c.44.439.44 1.146.44 2.56v1H8zm4-8v5m-6 4h12M13.037 2.867l1.055 2.129c.144.296.528.58.852.635l1.914.32c1.224.206 1.512 1.101.63 1.985L16 9.436c-.252.254-.39.744-.312 1.095l.426 1.856c.336 1.47-.438 2.039-1.728 1.27l-1.793-1.07c-.324-.194-.858-.194-1.188 0l-1.794 1.07c-1.284.769-2.064.194-1.728-1.27l.426-1.857c.078-.35-.06-.84-.312-1.094l-1.488-1.5c-.876-.884-.594-1.779.63-1.985l1.914-.32c.318-.055.702-.339.846-.635l1.056-2.13c.576-1.155 1.512-1.155 2.082 0" color="currentColor"/></svg>
+                </div>
+                <span class="inline-block text-[1.25rem]">
+                  Competition
+                </span>
+              </div>
+              <div class="flex flex-col space-y-3 items-center">
+                <div class="h-24 w-24 border-dotted flex items-center justify-center border-2 rounded-full p-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" color="currentColor"><path d="M11.007 21H9.605c-3.585 0-5.377 0-6.491-1.135S2 16.903 2 13.25s0-5.48 1.114-6.615S6.02 5.5 9.605 5.5h3.803c3.585 0 5.378 0 6.492 1.135c.857.873 1.054 2.156 1.1 4.365"/><path d="M20.017 20.023L22 22m-.947-4.474a3.527 3.527 0 1 0-7.053 0a3.527 3.527 0 0 0 7.053 0M16 5.5l-.1-.31c-.495-1.54-.742-2.31-1.331-2.75C13.979 2 13.197 2 11.63 2h-.263c-1.565 0-2.348 0-2.937.44c-.59.44-.837 1.21-1.332 2.75L7 5.5"/></g></svg>
+                </div>
+                <span class="inline-block text-[1.25rem]">
+                  Opportunity
+                </span>
+              </div>
+              <div class="flex flex-col space-y-3 items-center">
+                <div class="h-24 w-24 border-dotted border-2 flex items-center justify-center rounded-full p-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" color="currentColor"><path d="M16.613 16.085C13.98 17.568 12.477 20.64 12 21.5V8c.415-.746 1.602-2.884 3.632-4.336c.855-.612 1.282-.918 1.825-.64c.543.28.543.896.543 2.127v8.84c0 .666 0 .999-.137 1.232c-.136.234-.508.443-1.25.862"/><path d="M12 7.806c-.687-.722-2.678-2.436-6.02-3.036c-1.692-.305-2.538-.457-3.26.126C2 5.48 2 6.426 2 8.321v6.809c0 1.732 0 2.598.463 3.139c.462.54 1.48.724 3.518 1.09c1.815.326 3.232.847 4.258 1.37c1.01.514 1.514.771 1.761.771s.752-.257 1.76-.771c1.027-.523 2.444-1.044 4.26-1.37c2.036-.366 3.055-.55 3.517-1.09c.463-.541.463-1.407.463-3.14V8.322c0-1.894 0-2.841-.72-3.425C20.557 4.313 19 4.77 18 5.5"/></g></svg>
+                </div>
+                <span class="inline-block text-[1.25rem]">
+                  Knowledge
+                </span>
+              </div>
+            </div>
+          </div>
+
+      </div>
+
+      <div class="absolute bottom-[5rem]">
+        <button
+          class="group bg-white overflow-hidden flex justify-center items-center border-[.45rem] border-gray rounded-full py-4 px-[3rem]"
+        >
+          <span class="text-black inline-block overflow-hidden relative">
+            <span class="block text-[1.5rem] font-bold uppercase group-hover:-translate-y-full transition duration-300">
+              Close
+            </span>
+            <span class="absolute inline-block translate-y-full left-0 text-[1.5rem] font-bold uppercase group-hover:-translate-y-full transition duration-300">
+              Close
+            </span>
+          </span>
+      
+        </button>
+      </div>
+     </div>
 
     <!-- Footer (Persisted between renders) -->
      <div class="absolute flex items-center justify-center bg-black w-full exit">
