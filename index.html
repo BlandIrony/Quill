@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/FileIconsConfigJs.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quill & Co.</title>
     <link rel="stylesheet" href="src/main.css" />
@@ -10,7 +10,7 @@
   <body class="max-w-[1440px] mx-auto" data-barba="wrapper">
     
     <!-- Header (Persisted between renders) -->
-     <nav class="relative z-[1000] w-full flex items-center justify-between p-[2rem]">
+     <nav class="relative z-[20] w-full flex items-center justify-between -translate-y-full p-[2rem]">
       
       <!-- Logo -->
        <div class="">
@@ -28,12 +28,17 @@
       <!-- Dynamic Content -->
       
       <!-- Preview Gallery -->
-       <div class="fixed top-0 left-0 -z-10 p-[5rem] w-full h-full">
-        <!-- <div class="h-20 w-full bg-white">
-          <img src="" alt="">
-        </div>
-        <div></div>
-        <div></div> -->
+       <div class="gallery fixed top-0 left-0 -z-10 grid grid-cols-12 grid-rows-12 p-[2rem] w-full h-full">
+        
+        <!-- <div class="row-[8/12] col-[3/5] ">
+           <div class="w-full h-[90%]">
+            <div class="w-full h-full" style="background: url('./src/assets/images/Experientia\ 4.jpg'); background-position: center; background-size: cover;"></div>
+           </div>
+
+            <span class="text-[1.75rem] mt-2 uppercase inline-block">
+              Hungry
+            </span>
+        </div> -->
        </div>
 
        <!-- Links -->
@@ -43,8 +48,8 @@
             <!-- Links -->
              <ul class="flex flex-col items-center space-y-6" data-item="links-wrapper">
 
-              <li class="overflow-hidden text-center transition-colors duration-300">
-                <a href="/" class="inline-block w-fit uppercase">
+              <li class="overflow-hidden text-center hover:-translate-x-3 transition duration-300">
+                <a href="/" class="inline-block w-fit uppercase translate-y-full" data-item="link">
                   <span class="inline-block font-panchang-ex text-[5.5rem] leading-[80%]">
                     Remy
                   </span>
@@ -54,8 +59,8 @@
                 </a>
               </li>
 
-              <li class="overflow-hidden text-center transition-colors duration-300">
-                <a href="/" class="inline-block w-fit uppercase">
+              <li class="overflow-hidden text-center hover:translate-x-3 transition duration-300">
+                <a href="/" class="inline-block w-fit uppercase translate-y-full" data-item="link">
                   <span class="inline-block text-[1.5rem]">
                     (02)
                   </span>
@@ -65,8 +70,8 @@
                 </a>
               </li>
 
-              <li class="overflow-hidden  transition-colors duration-300">
-                <a href="/" class="inline-block w-fit uppercase">
+              <li class="overflow-hidden hover:-translate-x-3 transition duration-300">
+                <a href="/" class="inline-block w-fit uppercase translate-y-full" data-item="link">
                   <span class="inline-block font-panchang-ex text-[5.5rem] leading-[80%]">
                     Kriket
                   </span>
@@ -76,8 +81,8 @@
                 </a>
               </li>
 
-              <li class="overflow-hidden  transition-colors duration-300">
-                <a href="/" class="inline-block w-fit uppercase">
+              <li class="overflow-hidden hover:translate-x-3 transition duration-300">
+                <a href="/" class="inline-block w-fit uppercase translate-y-full" data-item="link">
                   <span class="inline-block text-[1.5rem]">
                     (04)
                   </span>
@@ -87,8 +92,8 @@
                 </a>
               </li>
 
-              <li class="overflow-hidden transition-colors duration-300">
-                <a href="/" class="inline-block w-fit uppercase">
+              <li class="overflow-hidden hover:-translate-x-3 transition duration-300">
+                <a href="/" class="inline-block w-fit uppercase translate-y-full" data-item="link">
                   <span class="inline-block font-panchang-ex text-[5.5rem] leading-[80%]">
                     NASA
                   </span>
@@ -98,8 +103,8 @@
                 </a>
               </li>
 
-              <li class="overflow-hidden transition-colors duration-300">
-                <a href="/" class="inline-block uppercase">
+              <li class="overflow-hidden hover:translate-x-3 transition duration-300">
+                <a href="/" class="inline-block uppercase translate-y-full" data-item="link">
                   <span class="inline-block text-[1.5rem]">
                     (06)
                   </span>
@@ -109,9 +114,9 @@
                 </a>
               </li>
 
-              <li class="overflow-hidden transition-colors duration-300">
-                <a href="/" class="inline-block uppercase">
-                  <span class="inline-block font-panchang-ex text-[5.5rem] leading-[80%]">
+              <li class="overflow-hidden hover:-translate-x-3 transition duration-300">
+                <a href="/" class="inline-block uppercase translate-y-full" data-item="link">
+                  <span class="inline-block font-panchang-ex text-[5.5rem] leading-[80%] mix-blend-exclusion">
                     Experientia &mdash; o
                   </span>
                   <span class="inline-block text-[1.5rem]">
@@ -126,6 +131,13 @@
     </main>
 
     <!-- Footer (Persisted between renders) -->
+     <div class="absolute flex items-center justify-center bg-black w-full exit">
+      <h1 class="overflow-hidden loader text-white tracking-tighter">
+        <span class="inline-block  text-[5rem] exit-span">Q</span>
+        <span class="inline-block  text-[5rem] exit-span">&</span>
+        <span class="inline-block  text-[5rem] exit-span">C</span>
+      </h1>
+     </div>
 
     <script type="module" src="/src/main.js"></script>
   </body>
