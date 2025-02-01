@@ -36,6 +36,12 @@ gsap.ticker.add((time) => {
 // Disable lag smoothing in GSAP to prevent any delay in scroll animations
 gsap.ticker.lagSmoothing(0);
 
+[...anchors].forEach((a, i) => {
+  // Get link attribute (href)
+  a.setAttribute('href', `./src/pages/product.html/${i + 1}`)
+  // console.log(a)
+})
+
 export default class Initialize {
   constructor () {
     this.init()
@@ -148,7 +154,7 @@ export default class Initialize {
     }, '-=.75')
     .from(closeBtn, {
       opacity: 0,
-      y: 100,
+      y: 20,
       duration: .55,
       ease: 'power2.out'
     }, '-=.5')
@@ -207,7 +213,7 @@ export default class Initialize {
         ease: 'power3.out',
         delay: 0.15 * index
       })
-      .fromTo(image, { scaleX: 1.12, scaleY: 1.15 }, { scale: 1, duration: .25, ease: 'power2.inOut' }, 'start-=.5')
+      .from(image, { scaleX: 1.12, scaleY: 1.15, duration: .5, ease: 'none' }, 'start-=.75')
 
       console.log(`${products[elemIndex].imageURLs[index]}`);
     }
