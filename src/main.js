@@ -133,21 +133,24 @@ export default class Initialize {
     tl.to(modal, {
       opacity: 1,
       display: 'flex',
-      duration: 1.5,
+      duration: 1.15,
       ease: 'power2.inOut'
     })
     .from(['[data-item="scale-1"]', '[data-item="scale-2"]'], {
       opacity: 0,
       scale: 0,
+      rotate: 3,
       duration: .55,
       stagger: {
         amount: 0.2
-      }
+      },
+      ease: 'power2.out'
     }, '-=.75')
     .from(closeBtn, {
       opacity: 0,
       y: 100,
-      duration: .55
+      duration: .55,
+      ease: 'power2.out'
     }, '-=.5')
 
     openBtn.addEventListener('click', () => {
