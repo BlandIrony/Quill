@@ -136,6 +136,19 @@ export default class Initialize {
       duration: 1.5,
       ease: 'power2.inOut'
     })
+    .from(['[data-item="scale-1"]', '[data-item="scale-2"]'], {
+      opacity: 0,
+      scale: 0,
+      duration: .55,
+      stagger: {
+        amount: 0.2
+      }
+    }, '-=.75')
+    .from(closeBtn, {
+      opacity: 0,
+      y: 100,
+      duration: .55
+    }, '-=.5')
 
     openBtn.addEventListener('click', () => {
       if(tl.reversed()) {
